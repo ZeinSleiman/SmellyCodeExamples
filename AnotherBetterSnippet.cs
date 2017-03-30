@@ -67,6 +67,7 @@ namespace Yakky.AnotherSnippet.Better
 
                 //We did something here called some more methods 
                 var someResult = true;
+                // String concatenation use string.Format or $"{}"
                 ri.Messages.Add("MoreMessaging", "Some Text: " + someResult + " !!!!! ");
                 if (someResult)
                 {
@@ -94,6 +95,7 @@ namespace Yakky.AnotherSnippet.Better
             {
                 //We at least It is checking the exception and adding it in the Messages
                 //Hold on Hold on -  Lets go back to the calling method
+                //string concatenation again
                 ri.Message = "Ops an exception happened " + ex.Message;
             }
             finally
@@ -113,6 +115,8 @@ namespace Yakky.AnotherSnippet.Better
         {
             try
             {
+                //We also have a foreach that don't use the p variable
+                //p is not a good name
                 foreach (var p in myEmails)
                 {
                     //If this is completely wrapped in an exception 
