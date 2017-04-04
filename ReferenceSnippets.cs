@@ -1,6 +1,6 @@
 using System;
 
-namespace Yakky.AnotherSnippet.Better
+namespace Yakky.ReferenceSnippet
 {
     public class Product
     {
@@ -11,10 +11,10 @@ namespace Yakky.AnotherSnippet.Better
 
     public class Process
     {
-        public int DoSomething(Product product)
+        public bool ValidateProduct(Product product)
         {
             product.Sku = "test";
-            return 0;
+            return true;
         }
 
         public void Main()
@@ -27,7 +27,7 @@ namespace Yakky.AnotherSnippet.Better
             };
 
             Console.Write(product.Sku);
-            Console.Write(DoSomething(product));
+            Console.Write(ValidateProduct(product));
             Console.Write(product.Sku);
         }
     }
